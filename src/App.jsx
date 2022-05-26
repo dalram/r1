@@ -4,6 +4,7 @@ import './App.scss';
 import Bala from './Components/ReactList/Bala.jsx'
 import Jura from './Components/ReactList/Jura';
 import Tvenkinys from './Components/ReactList/Tvenkinys';
+import Vandenynas from './Components/ReactList/Vandenynas';
 
 const seaPlaners = [
     {id: 1, type: 'man', name: 'Lina', color: 'blue'},
@@ -40,11 +41,11 @@ function App() {
                 <Jura seaPlaners={seaPlaners}></Jura>
                 {/* 4. Sukurti keturis komponentus Vandenynas, Tipas, Vardas, Spalva. Vandenynas tėvinis komponentas kiti trys vaikiniai. Vaikiniuose komponentuose atvaizduoti tą patį masyvą, tik išrūšiuotą pagal komponento vardą (pvz Tipas išrūšiuota pagal tipą ir t.t.). */}
                 <h2>Vandenynas</h2>
-
+                <Vandenynas seaPlaners={seaPlaners}></Vandenynas>
 
             </header>
         </div>
-      );
+      )
     }
     
     export default App;
