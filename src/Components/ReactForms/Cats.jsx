@@ -4,7 +4,6 @@ function Cats () {
     const [catName, setCatName] = useState('');
     const [catWeight, setCatWeight] = useState('');
     const [cats, setCats] = useState(null);
-    const [catsWeight, setCatsWeight] = useState(0);
     const confirmCat = (catName, catWeight) => {
         const catArray = {name: catName, weight: catWeight};
         setCats(cats => cats === null ? [catArray]: [...cats, catArray]);
