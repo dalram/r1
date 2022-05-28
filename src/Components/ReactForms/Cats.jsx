@@ -8,16 +8,13 @@ function Cats () {
     const confirmCat = (catName, catWeight) => {
         const catArray = {name: catName, weight: catWeight};
         setCats(cats => cats === null ? [catArray]: [...cats, catArray]);
-        
+     
     }
     useEffect(() => {
         setCats(JSON.parse(localStorage.getItem('Cats')));
     }, [])
     useEffect(() => {
         localStorage.setItem('Cats', JSON.stringify(cats));
-        // for (let i = 0; i < (cats === null ? 0 : cats.length); i++) {
-        //     setCatsWeight(catsWeight => parseInt(catsWeight) + parseInt(cats[i].weight))
-        // }
     }, [cats]);
     
     
@@ -34,9 +31,9 @@ function Cats () {
 
                 </div>
                 <div>
-                    {/* Bendras katinuku svoris: {catsWeight} */}
-                    {
-                        cats === null ? null : cats.reduce((total, catWeight) => <div>{total + parseInt(catWeight.weight)}</div>, 0)
+                    Bendras katinuku svoris: {
+                        cats === null ? null : cats.reduce((total, item) => total + parseInt(item.weight), 0)
+
                     }
                 </div>
                 <p>Cats name</p>
