@@ -57,7 +57,7 @@ function App() {
     }
     
 }
-    
+    // Puslapiui persikrovus istorija yra užmirštama. Saugoma tik istorija iki puslapiui persikraunant. Į istoriją turi būti pridedami veiksmai tiek iš “Pridėti” tiek iš “Išvalyti” mygtukų paspaudimo.???????
     return (
         <div className="App">
             <header className="App-header">
